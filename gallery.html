@@ -1,0 +1,238 @@
+<!-- REPLACE YOUR gallery.html WITH THIS -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>G&G Photo Studio | Gallery</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial, sans-serif;
+background:#111;
+color:#fff;
+}
+
+header{
+background:#000;
+padding:15px 25px;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.logo{
+font-size:24px;
+font-weight:bold;
+color:#ffd700;
+}
+
+nav ul{
+display:flex;
+gap:20px;
+list-style:none;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+transition:.3s;
+}
+
+nav a:hover{
+color:#ffd700;
+}
+
+.hero{
+padding:50px 20px;
+text-align:center;
+background:#1a1a1a;
+}
+
+.hero h1{
+font-size:42px;
+margin-bottom:10px;
+}
+
+.hero p{
+color:#ccc;
+}
+
+.gallery{
+padding:40px 25px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+max-width:1300px;
+margin:auto;
+}
+
+.card{
+background:#1b1b1b;
+border-radius:18px;
+overflow:hidden;
+transition:.4s;
+box-shadow:0 10px 20px rgba(0,0,0,.3);
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 30px rgba(255,215,0,.2);
+}
+
+.card img{
+width:100%;
+height:260px;
+object-fit:cover;
+display:block;
+}
+
+.card .txt{
+padding:15px;
+text-align:center;
+}
+
+.drive-btn{
+display:inline-block;
+margin-top:10px;
+padding:10px 14px;
+background:#ffd700;
+color:#000;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
+transition:.3s;
+}
+
+.drive-btn:hover{
+background:#fff;
+}
+
+footer{
+background:#000;
+padding:20px;
+text-align:center;
+margin-top:40px;
+}
+
+.chatbot{
+position:fixed;
+right:20px;
+bottom:20px;
+width:60px;
+height:60px;
+border-radius:50%;
+background:#10a37f;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:24px;
+color:#fff;
+text-decoration:none;
+box-shadow:0 10px 20px rgba(0,0,0,.4);
+}
+
+@media(max-width:768px){
+nav{
+flex-direction:column;
+gap:10px;
+}
+
+.hero h1{
+font-size:30px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<div class="logo">G&G Photo Studio</div>
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="info.html">Info</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="hero">
+<h1>Our Gallery</h1>
+<p>Click photos to open full image from Google Drive</p>
+</section>
+
+<section class="gallery">
+
+<!-- PHOTO 1 -->
+<div class="card">
+<a href="https://drive.google.com/file/d/PHOTO_ID_1/view" target="_blank">
+<img src="https://drive.google.com/uc?id=PHOTO_ID_1">
+</a>
+<div class="txt">
+Wedding Collection
+<br>
+<a class="drive-btn" href="https://drive.google.com/file/d/PHOTO_ID_1/view" target="_blank">Open</a>
+</div>
+</div>
+
+<!-- PHOTO 2 -->
+<div class="card">
+<a href="https://drive.google.com/file/d/PHOTO_ID_2/view" target="_blank">
+<img src="https://drive.google.com/uc?id=PHOTO_ID_2">
+</a>
+<div class="txt">
+Birthday Session
+<br>
+<a class="drive-btn" href="https://drive.google.com/file/d/PHOTO_ID_2/view" target="_blank">Open</a>
+</div>
+</div>
+
+<!-- PHOTO 3 -->
+<div class="card">
+<a href="https://drive.google.com/file/d/PHOTO_ID_3/view" target="_blank">
+<img src="https://drive.google.com/uc?id=PHOTO_ID_3">
+</a>
+<div class="txt">
+Studio Portrait
+<br>
+<a class="drive-btn" href="https://drive.google.com/file/d/PHOTO_ID_3/view" target="_blank">Open</a>
+</div>
+</div>
+
+<!-- GOOGLE DRIVE FOLDER -->
+<div class="card">
+<div class="txt" style="padding:40px;">
+<h2>Full Gallery Folder</h2>
+<br>
+<a class="drive-btn" href="https://drive.google.com/drive/folders/YOUR_FOLDER_ID" target="_blank">
+Open Google Drive Folder
+</a>
+</div>
+</div>
+
+</section>
+
+<footer>
+© 2026 G&G Photo Studio
+</footer>
+
+<a class="chatbot" href="https://chat.openai.com" target="_blank">💬</a>
+
+</body>
+</html>
